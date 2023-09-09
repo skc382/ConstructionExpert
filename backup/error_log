@@ -1,0 +1,20 @@
+[07-Oct-2021 10:07:05 UTC] PHP Warning:  POST Content-Length of 10452378 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[07-Oct-2021 15:38:29 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 26780000 bytes) in /home/construction/public_html/system/libraries/Image_lib.php on line 1474
+[07-Oct-2021 15:38:46 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 26780000 bytes) in /home/construction/public_html/system/libraries/Image_lib.php on line 1474
+[07-Oct-2021 15:38:58 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32768 bytes) in /home/construction/public_html/system/libraries/Image_lib.php on line 1474
+[07-Oct-2021 15:38:58 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32768 bytes) in /home/construction/public_html/system/core/Exceptions.php on line 1
+[07-Oct-2021 15:39:17 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32768 bytes) in /home/construction/public_html/system/libraries/Image_lib.php on line 1474
+[07-Oct-2021 15:39:17 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32768 bytes) in /home/construction/public_html/system/core/Exceptions.php on line 1
+[07-Oct-2021 15:39:26 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32768 bytes) in /home/construction/public_html/system/libraries/Image_lib.php on line 1474
+[07-Oct-2021 15:39:26 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32768 bytes) in /home/construction/public_html/system/core/Exceptions.php on line 1
+[07-Oct-2021 10:09:35 UTC] PHP Warning:  POST Content-Length of 10452370 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[07-Oct-2021 10:09:48 UTC] PHP Warning:  POST Content-Length of 10452370 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[07-Oct-2021 10:09:57 UTC] PHP Warning:  POST Content-Length of 10452465 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[07-Oct-2021 10:10:02 UTC] PHP Warning:  POST Content-Length of 10452465 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[07-Oct-2021 10:10:04 UTC] PHP Warning:  POST Content-Length of 10452465 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[07-Oct-2021 10:10:06 UTC] PHP Warning:  POST Content-Length of 10452465 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[07-Oct-2021 10:10:11 UTC] PHP Warning:  POST Content-Length of 10452465 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[07-Oct-2021 10:10:12 UTC] PHP Warning:  POST Content-Length of 10452465 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[07-Oct-2021 10:10:14 UTC] PHP Warning:  POST Content-Length of 10452465 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[07-Oct-2021 10:12:51 UTC] PHP Warning:  POST Content-Length of 10452359 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[07-Oct-2021 15:47:34 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 26780000 bytes) in /home/construction/public_html/system/libraries/Image_lib.php on line 1474
