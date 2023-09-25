@@ -97,7 +97,7 @@ class Home extends CI_Controller {
         //     'smtp_crypto'=>'ssl',
         //     'smtp_host' => 'mail.constructionexpert.in',
         //     'smtp_port' => 465, //465
-        //     'smtp_user' => 'info@constructionexpert.in',
+        //     'smtp_user' => 'contact@constructionexpert.in',
         //     'smtp_pass' => 'yP%ho#VS]DzK',
         //     'mailtype' => 'text',
         //     'charset' => 'utf8',
@@ -108,9 +108,9 @@ class Home extends CI_Controller {
         $config = array(
             'protocol' => 'smtp',
             'smtp_crypto'=>'ssl',
-            'smtp_host' => 'smtp.gmail.com',
+            'smtp_host' => 'constructionexpert.in',
             'smtp_port' => 465, //465
-            'smtp_user' => 'info@constructionexpert.in',
+            'smtp_user' => 'contact@constructionexpert.in',
             'smtp_pass' => 'sniffy007',
             'mailtype' => 'html',
             'charset' => 'utf8',
@@ -120,8 +120,8 @@ class Home extends CI_Controller {
         $this->load->library('email',$config);
 
         $this->email->set_newline("\r\n");
-        $this->email->from('info@constructionexpert.in','constructionexpert.in');
-        $this->email->to('info@constructionexpert.in');
+        $this->email->from('contact@constructionexpert.in');
+        $this->email->to('contact@constructionexpert.in');
         $this->email->subject('This is an email test.');
         $this->email->message('<b>It is working</b>.');
         //$this->email->send();
@@ -129,6 +129,7 @@ class Home extends CI_Controller {
         
         if($this->email->send())
         {
+            echo $this->email->print_debugger();
             echo 'Your email was sent';
         }
         else
@@ -144,9 +145,9 @@ class Home extends CI_Controller {
     $phone=$this->input->post('phone');
     $description=$this->input->post('msg');
     $config['protocol']    = 'smtp';    
-    $config['smtp_host']    = 'smtp.gmail.com';    
+    $config['smtp_host']    = 'constructionexpert.in';    
     $config['smtp_port']    = 465;    
-    $config['smtp_user']    = 'info@constructionexpert.in';    
+    $config['smtp_user']    = 'contact@constructionexpert.in';    
     $config['smtp_pass']    = 'sniffy007';	
     $config['smtp_crypto'] = "ssl";    
     $config['charset']    = 'iso-8859-1';    
@@ -155,13 +156,13 @@ class Home extends CI_Controller {
 
     $content='<html><body><p>Fullname : '.$name.'</p><p>Email : '.$useremail.'</p><p>Phone : '.$phone.'</p><p>Message : '.$description.'</p></body></html>';
 
-    $this->email->from($useremail);
+    $this->email->from($web[0]['sitemail']);
     $this->email->to($web[0]['sitemail'],$web[0]['sitename']);
-    $this->email->subject('Customer inquiry');
+    $this->email->subject('Customer inquiry from - '.$useremail);
     $this->email->message($content);
     if($this->email->send()){
     echo '<div class="alert alert-success"> Thanks for submission your details are kept confidential according to our privacy policy.. we\'ll get back to u soon with best quotation...... </div>';    
-    }else{    // echo $this->email->print_debugger();		/* $config['protocol']    = 'smtp';    $config['smtp_host']    = 'ssl://smtp.gmail.com';    $config['smtp_port']    = 465;    $config['smtp_user']    = 'info@constructionexpert.in';    $config['smtp_pass']    = 'sniffy007';    $config['charset']    = 'utf-8';    $config['newline']    = "\r\n";    $config['mailtype'] = 'html'; // or html    $config['validation'] = FALSE; // bool whether to validate email or not          $this->email->initialize($config);		$content='<html><body><p>Fullname : '.$name.'</p><p>Email : '.$useremail.'</p><p>Phone : '.$phone.'</p><p>Message : '.$description.'</p></body></html>';    $this->email->from($useremail);    $this->email->to('venkata.mahesh123@gmail.com',$web[0]['sitename']);    $this->email->subject('Customer inquiry');    $this->email->message($content);    $this->email->send();    echo $this->email->print_debugger(); */     // $this->load->view('email_view');
+    }else{    // echo $this->email->print_debugger();		/* $config['protocol']    = 'smtp';    $config['smtp_host']    = 'ssl://smtp.gmail.com';    $config['smtp_port']    = 465;    $config['smtp_user']    = 'contact@constructionexpert.in';    $config['smtp_pass']    = 'sniffy007';    $config['charset']    = 'utf-8';    $config['newline']    = "\r\n";    $config['mailtype'] = 'html'; // or html    $config['validation'] = FALSE; // bool whether to validate email or not          $this->email->initialize($config);		$content='<html><body><p>Fullname : '.$name.'</p><p>Email : '.$useremail.'</p><p>Phone : '.$phone.'</p><p>Message : '.$description.'</p></body></html>';    $this->email->from($useremail);    $this->email->to('venkata.mahesh123@gmail.com',$web[0]['sitename']);    $this->email->subject('Customer inquiry');    $this->email->message($content);    $this->email->send();    echo $this->email->print_debugger(); */     // $this->load->view('email_view');
     
 echo '<div class="alert alert-danger">'.$this->email->print_debugger().' </div>';
     
@@ -180,9 +181,9 @@ echo '<div class="alert alert-danger">'.$this->email->print_debugger().' </div>'
     $catid=$this->input->post('catid');
     
     $config['protocol']    = 'smtp';    
-    $config['smtp_host']    = 'smtp.gmail.com';    
+    $config['smtp_host']    = 'constructionexpert.in';    
     $config['smtp_port']    = 465;    
-    $config['smtp_user']    = 'info@constructionexpert.in';    
+    $config['smtp_user']    = 'contact@constructionexpert.in';    
     $config['smtp_pass']    = 'sniffy007';	
     $config['smtp_crypto'] = "ssl";    
     $config['charset']    = 'iso-8859-1';    
@@ -205,13 +206,13 @@ echo '<div class="alert alert-danger">'.$this->email->print_debugger().' </div>'
 
       $content='<html><body><p>Category : '.$getcat->category.'</p><p>Fullname : '.$name.'</p><p>Email : '.$useremail.'</p><p>Phone : '.$phone.'</p><p>Company Name : '.$cmpname.'</p><p>City : '.$city.'</p><p>Address : '.$address.'</p><p>Pincode : '.$pincode.'</p><p>Description : '.$description.'</p></body></html>';
 
-       $this->email->from($useremail);
+       $this->email->from($web[0]['sitemail']);
       $this->email->to($web[0]['sitemail'],$web[0]['sitename']);
-      $this->email->subject('Customer inquiry');
+      $this->email->subject('Customer quote request - '.$useremail);
       $this->email->message($content);
         if($this->email->send()){
     echo '<div class="alert alert-success"> Thanks for submission your details are kept confidential according to our privacy policy.. we\'ll get back to u soon with best quotation...... </div>';    
-        }else{    // echo $this->email->print_debugger();		/* $config['protocol']    = 'smtp';    $config['smtp_host']    = 'ssl://smtp.gmail.com';    $config['smtp_port']    = 465;    $config['smtp_user']    = 'info@constructionexpert.in';    $config['smtp_pass']    = 'sniffy007';    $config['charset']    = 'utf-8';    $config['newline']    = "\r\n";    $config['mailtype'] = 'html'; // or html    $config['validation'] = FALSE; // bool whether to validate email or not          $this->email->initialize($config);		$content='<html><body><p>Fullname : '.$name.'</p><p>Email : '.$useremail.'</p><p>Phone : '.$phone.'</p><p>Message : '.$description.'</p></body></html>';    $this->email->from($useremail);    $this->email->to('venkata.mahesh123@gmail.com',$web[0]['sitename']);    $this->email->subject('Customer inquiry');    $this->email->message($content);    $this->email->send();    echo $this->email->print_debugger(); */     // $this->load->view('email_view');
+        }else{    // echo $this->email->print_debugger();		/* $config['protocol']    = 'smtp';    $config['smtp_host']    = 'ssl://smtp.gmail.com';    $config['smtp_port']    = 465;    $config['smtp_user']    = 'contact@constructionexpert.in';    $config['smtp_pass']    = 'sniffy007';    $config['charset']    = 'utf-8';    $config['newline']    = "\r\n";    $config['mailtype'] = 'html'; // or html    $config['validation'] = FALSE; // bool whether to validate email or not          $this->email->initialize($config);		$content='<html><body><p>Fullname : '.$name.'</p><p>Email : '.$useremail.'</p><p>Phone : '.$phone.'</p><p>Message : '.$description.'</p></body></html>';    $this->email->from($useremail);    $this->email->to('venkata.mahesh123@gmail.com',$web[0]['sitename']);    $this->email->subject('Customer inquiry');    $this->email->message($content);    $this->email->send();    echo $this->email->print_debugger(); */     // $this->load->view('email_view');
         
     echo '<div class="alert alert-danger">'.$this->email->print_debugger().' </div>';
         
@@ -246,9 +247,9 @@ echo '<div class="alert alert-danger">'.$this->email->print_debugger().' </div>'
     $userserviceid=$this->input->post('userserviceid');
   
     $config['protocol']    = 'smtp';    
-    $config['smtp_host']    = 'smtp.gmail.com';    
+    $config['smtp_host']    = 'constructionexpert.in';    
     $config['smtp_port']    = 465;    
-    $config['smtp_user']    = 'info@constructionexpert.in';    
+    $config['smtp_user']    = 'contact@constructionexpert.in';    
     $config['smtp_pass']    = 'sniffy007';	
     $config['smtp_crypto'] = "ssl";    
     $config['charset']    = 'iso-8859-1';    
@@ -275,7 +276,7 @@ echo '<div class="alert alert-danger">'.$this->email->print_debugger().' </div>'
       $this->email->message($content);
           if($this->email->send()){
     echo '<div class="alert alert-success"> Thanks for submission your details are kept confidential according to our privacy policy.. we\'ll get back to u soon with best quotation...... </div>';    
-        }else{    // echo $this->email->print_debugger();		/* $config['protocol']    = 'smtp';    $config['smtp_host']    = 'ssl://smtp.gmail.com';    $config['smtp_port']    = 465;    $config['smtp_user']    = 'info@constructionexpert.in';    $config['smtp_pass']    = 'sniffy007';    $config['charset']    = 'utf-8';    $config['newline']    = "\r\n";    $config['mailtype'] = 'html'; // or html    $config['validation'] = FALSE; // bool whether to validate email or not          $this->email->initialize($config);		$content='<html><body><p>Fullname : '.$name.'</p><p>Email : '.$useremail.'</p><p>Phone : '.$phone.'</p><p>Message : '.$description.'</p></body></html>';    $this->email->from($useremail);    $this->email->to('venkata.mahesh123@gmail.com',$web[0]['sitename']);    $this->email->subject('Customer inquiry');    $this->email->message($content);    $this->email->send();    echo $this->email->print_debugger(); */     // $this->load->view('email_view');
+        }else{    // echo $this->email->print_debugger();		/* $config['protocol']    = 'smtp';    $config['smtp_host']    = 'ssl://smtp.gmail.com';    $config['smtp_port']    = 465;    $config['smtp_user']    = 'contact@constructionexpert.in';    $config['smtp_pass']    = 'sniffy007';    $config['charset']    = 'utf-8';    $config['newline']    = "\r\n";    $config['mailtype'] = 'html'; // or html    $config['validation'] = FALSE; // bool whether to validate email or not          $this->email->initialize($config);		$content='<html><body><p>Fullname : '.$name.'</p><p>Email : '.$useremail.'</p><p>Phone : '.$phone.'</p><p>Message : '.$description.'</p></body></html>';    $this->email->from($useremail);    $this->email->to('venkata.mahesh123@gmail.com',$web[0]['sitename']);    $this->email->subject('Customer inquiry');    $this->email->message($content);    $this->email->send();    echo $this->email->print_debugger(); */     // $this->load->view('email_view');
         
     echo '<div class="alert alert-danger">'.$this->email->print_debugger().' </div>';
         
