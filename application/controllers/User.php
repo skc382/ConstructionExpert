@@ -58,9 +58,9 @@ class User extends CI_Controller {
 
             $web=$this->home->getWebsiteSettings(); 
             $config['protocol']    = 'smtp';    
-            $config['smtp_host']    = 'smtp.gmail.com';    
+            $config['smtp_host']    = 'constructionexpert.in';    
             $config['smtp_port']    = 465;    
-            $config['smtp_user']    = 'info@constructionexpert.in';    
+            $config['smtp_user']    = 'contact@constructionexpert.in';    
             $config['smtp_pass']    = 'sniffy007';	
             $config['smtp_crypto'] = "ssl";    
             $config['charset']    = 'iso-8859-1';    
